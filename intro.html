@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center; /* Center vertically */
+        justify-content: flex-start; /* Align to the left */
+        background-color: black;
+        overflow: hidden;
+    }
+    .container {
+        font-size: 10px;
+        width: 60em; /* Increased width */
+        height: 60em; /* Increased height */
+        position: relative;
+    }
+    .sun {
+        position: absolute;
+        top: 22.5em; /* Adjusted position */
+        left: 22.5em; /* Adjusted position */
+        width: 15em; /* Increased size */
+        height: 15em; /* Increased size */
+        background-color: yellow;
+        border-radius: 50%;
+        box-shadow: 0 0 3em white;
+    }
+    .earth, .moon {
+        position: absolute;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+        border-width: 0.1em 0.1em 0 0;
+        border-radius: 50%;
+    }
+    .earth {
+        top: 7.5em; /* Adjusted position */
+        left: 7.5em; /* Adjusted position */
+        width: 45em; /* Increased size */
+        height: 45em; /* Increased size */
+        animation: orbit 36.5s linear infinite;
+    }
+    .moon {
+        top: 0;
+        right: 0;
+        width: 12em; /* Increased size */
+        height: 12em; /* Increased size */
+        animation: orbit 2.7s linear infinite;
+    }
+    .earth::before,
+    .moon::before {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+    }
+    .earth::before {
+        top: 6.5em; /* Adjusted position */
+        right: 6.5em; /* Adjusted position */
+        width: 4.5em; /* Increased size */
+        height: 4.5em; /* Increased size */
+        background-color: aqua;
+    }
+    .moon::before {
+        top: 1.8em; /* Adjusted position */
+        right: 0.3em; /* Adjusted position */
+        width: 1.8em; /* Increased size */
+        height: 1.8em; /* Increased size */
+        background-color: silver;
+    }
+    @keyframes orbit {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .choose {
+            background-color: #272525;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(46, 43, 43, 0.1);
+            text-align: center;
+            width: 50%; /* Adjusted width */
+            margin-right: 20px; 
+            font-size: 16px; /* Adjusted font size */
+            color: #e4e4e4;
+        }
+
+        .choose p {
+            color: #f3eeee;
+            margin-bottom: 1em;
+        }
+
+        .choose button {
+            padding: 15px 30px; /* Adjusted padding */
+            background-color: #2e4357;
+            color: #fff;
+            border:#272525;
+            border-spacing: 3cm;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .choose button:hover {
+            background-color: #64aae7;
+        }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sun"></div>
+        <div class="earth">
+            <div class="moon"></div>
+        </div>
+    </div>
+
+    <div class="choose">
+        <h1>Click this to be directed to the store!</h2>
+        <p>Insane discounts this week for every product category!</p>
+        <ul>
+            <button onclick="Go()">Let's Go!</button>
+
+</body>
+</html>
+
+<script>
+    function Go() {
+        window.location.href = 'home.html'
+    }
+</script>

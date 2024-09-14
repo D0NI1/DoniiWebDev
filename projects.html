@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="stylesprojects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #282c34;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #515455;
+            border-radius: 8px;
+            margin-top: 1em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: #282c34;
+            text-decoration: none;
+            padding: 0.75em 1.5em;
+            display: block;
+            font-size: 1.1em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #282c34;
+            color: #61dafb;
+        }
+
+        .home, .contact {
+            padding: 2em;
+            text-align: center;
+            background-color: #fff;
+            margin: 1em 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 2em;
+            justify-content: center;
+        }
+
+        .project-card {
+            flex: 1 1 calc(25% - 16px);
+            box-sizing: border-box;
+            padding: 1.5em;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #282c34;
+        }
+
+        .project-card p {
+            color: #666;
+            font-size: 1em;
+        }
+
+        .project-card button {
+            margin-top: 1em;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 4px;
+            background-color: #61dafb;
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .project-card button:hover {
+            background-color: #282c34;
+        }
+
+        .social-icons {
+            margin: 1em 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-icons a {
+            margin: 0 0.5em;
+            color: #333;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #61dafb;
+        }
+
+        footer {
+            background-color: #282c34;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            margin-top: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Here you can find a showcase of my web development projects. Feel free to explore and contact me if you have any questions or would like to work together.</p>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="project-card">   
+            <h3>Online Games</h3>
+            <p>This is a website that if you have access to a username and password you can log in and play some fun games.</p>
+            <button onclick="Check1()">Check it out!</button>
+        </div>
+        <div class="project-card">    
+            <h3>Fasamen</h3>
+            <p>A website made for a big company.</p>
+            <button onclick="Check2()">Check it out!</button>
+        </div>
+        <div class="project-card">    
+            <h3>E-Commerce Store</h3>
+            <p>A website made for my client who wanted to open an online store.</p>
+            <button onclick="Check3()">Check it out!</button>
+        </div>
+        <div class="project-card">    
+            <h3>Baki Automobil</h3>
+            <p>A website made for one of the best car sellers.</p>
+            <button onclick="Check4()">Check it out!</button>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>You can reach me via email at <a href="mailto:doniiwebdev@gmail.com">doniiwebdev@gmail.com</a>.</p>
+        <div class="social-icons">
+            <a href="https://x.com/DoniiWebDev" class="icon" target="_blank"><i class="fa-brands fa-x"></i></a>
+            <a href="https://facebook.com/Donii WebDev" class="icon" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://github.com/d0ni1" class="icon" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://tiktok.com/@doniiwebdev" class="icon" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://instagram.com/doniiwebdev" class="icon" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function Check1() { 
+            window.location.href ='index1.html'; 
+        }
+
+        function Check2() { 
+            window.location.href ='source1.html'; 
+        }
+
+        function Check3() { 
+            window.location.href ='intro.html'; 
+        }
+
+        function Check4() { 
+            window.location.href ='BakiAutomobil.html'; 
+        }
+    </script>
+</body>
+</html>
